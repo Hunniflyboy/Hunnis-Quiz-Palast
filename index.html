@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Buzzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Login</h2>
+        <input type="text" id="name" placeholder="Name eingeben"><br>
+        <input type="password" id="password" placeholder="Passwort eingeben"><br>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+        <h2>Quiz Buzzer</h2>
+        <h3>Timer:</h3>
+        <input type="number" id="timer" placeholder="Sekunden eingeben">
+        <button onclick="startTimer()">Start Timer</button>
+        <div id="time"></div>
+        <div class="buzzer" onclick="buzz()">Buzz!</div>
+        <h3>Gebuzzert:</h3>
+        <div id="buzzList"></div>
+        <div class="answer-section">
+            <textarea id="answer" placeholder="Antwort eingeben"></textarea>
+            <button onclick="submitAnswer()">Senden</button>
+        </div>
+        <div id="answers"></div>
+        <button onclick="resetBuzzers()">Buzzer reaktivieren</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
